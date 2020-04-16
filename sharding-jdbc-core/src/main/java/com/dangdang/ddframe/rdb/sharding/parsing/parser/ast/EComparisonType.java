@@ -18,7 +18,8 @@ public enum EComparisonType {
     BANG_EQ("!="),
 
     IN("IN"),
-    BETWEEN("BETWEEN");
+    BETWEEN("BETWEEN"),
+    LIKE("LIKE");
 
     private static Map<String, EComparisonType> symbols = new HashMap<>(128);
 

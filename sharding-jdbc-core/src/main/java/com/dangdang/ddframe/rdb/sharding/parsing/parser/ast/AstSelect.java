@@ -23,6 +23,12 @@ public class AstSelect extends AbstractAst {
      * 查询项
      */
     private final List<SelectItem> items = new LinkedList<>();
+
+    /**
+     * Where条件组
+     */
+    private ConditionGroup conditionGroup;
+
     /**
      * 分组项
      */
@@ -36,7 +42,7 @@ public class AstSelect extends AbstractAst {
      */
     private Limit limit;
 
-    public AstSelect(SQLType sqlType, Table table) {
-        super(sqlType, table);
+    public AstSelect(SQLType sqlType) {
+        super(sqlType);
     }
 }
