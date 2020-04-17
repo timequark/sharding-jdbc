@@ -1,4 +1,4 @@
-package com.dangdang.ddframe.rdb.sharding.parsing.parser.ast;
+package com.dangdang.ddframe.rdb.sharding.parsing.parser.ast.model;
 
 import com.dangdang.ddframe.rdb.sharding.parsing.lexer.token.Token;
 import lombok.Getter;

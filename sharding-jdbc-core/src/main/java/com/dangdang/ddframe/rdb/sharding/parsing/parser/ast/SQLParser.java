@@ -27,14 +27,15 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 类似SQLParser
+ * 基于com.dangdang.ddframe.rdb.sharding.parsing.parser.SQLParser
+ * 改造
  *
  * @author liuhao
  */
 @Getter
-public class AstParser extends AbstractParser {
+public class SQLParser extends AbstractParser {
 
-    public AstParser(final Lexer lexer) {
+    public SQLParser(final Lexer lexer) {
         super(lexer);
         getLexer().nextToken();
     }

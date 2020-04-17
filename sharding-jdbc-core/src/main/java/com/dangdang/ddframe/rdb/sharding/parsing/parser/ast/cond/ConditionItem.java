@@ -1,5 +1,6 @@
-package com.dangdang.ddframe.rdb.sharding.parsing.parser.ast;
+package com.dangdang.ddframe.rdb.sharding.parsing.parser.ast.cond;
 
+import com.dangdang.ddframe.rdb.sharding.parsing.parser.ast.rel.EComparisonType;
 import com.dangdang.ddframe.rdb.sharding.parsing.parser.expression.SQLExpression;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

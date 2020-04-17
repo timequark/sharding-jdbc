@@ -1,10 +1,10 @@
-package com.dangdang.ddframe.rdb.sharding.parsing.parser.ast;
+package com.dangdang.ddframe.rdb.sharding.parsing.parser.ast.model;
 
 import com.dangdang.ddframe.rdb.sharding.constant.SQLType;
+import com.dangdang.ddframe.rdb.sharding.parsing.parser.ast.cond.ConditionGroup;
 import com.dangdang.ddframe.rdb.sharding.parsing.parser.context.OrderItem;
 import com.dangdang.ddframe.rdb.sharding.parsing.parser.context.limit.Limit;
 import com.dangdang.ddframe.rdb.sharding.parsing.parser.context.selectitem.SelectItem;
-import com.dangdang.ddframe.rdb.sharding.parsing.parser.context.table.Table;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +13,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public final class AstSelect extends AbstractAst {
+public final class AstSelect extends Ast {
     /**
      * 是否查询所有字段，即 SELECT *
      * 单独加了这个字段的标志原因是，一些业务地方会判断是否需要的字段已经查询，例如 GROUP BY / ORDER BY
