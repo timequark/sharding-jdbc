@@ -17,4 +17,5 @@ public abstract class AbstractSelectParser implements SQLStatementParser {
         this.astSelect = new AstSelect(SQLType.DQL);
     }
 
+    protected abstract void query();
 }
