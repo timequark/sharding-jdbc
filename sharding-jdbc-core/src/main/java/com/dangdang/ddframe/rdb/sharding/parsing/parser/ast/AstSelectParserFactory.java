@@ -6,7 +6,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public final class AstParserFactory {
+public final class AstSelectParserFactory {
 
     public static AbstractSelectParser newInstance(final SQLParser sqlParser) {
         if (sqlParser instanceof MySQLParser) {
