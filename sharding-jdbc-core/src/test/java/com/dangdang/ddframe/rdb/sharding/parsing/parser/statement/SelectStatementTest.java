@@ -17,7 +17,9 @@
 
 package com.dangdang.ddframe.rdb.sharding.parsing.parser.statement;
 
+import com.dangdang.ddframe.rdb.sharding.constant.DatabaseType;
 import com.dangdang.ddframe.rdb.sharding.constant.OrderType;
+import com.dangdang.ddframe.rdb.sharding.parsing.SQLParsingEngine;
 import com.dangdang.ddframe.rdb.sharding.parsing.parser.context.OrderItem;
 import com.dangdang.ddframe.rdb.sharding.parsing.parser.statement.dql.select.SelectStatement;
 import com.google.common.base.Optional;
@@ -49,5 +51,10 @@ public final class SelectStatementTest {
         actual.getOrderByItems().add(new OrderItem("order_col", OrderType.ASC, Optional.<String>absent()));
         actual.getGroupByItems().add(new OrderItem("group_col", OrderType.ASC, Optional.<String>absent()));
         assertFalse(actual.isSameGroupByAndOrderByItems());
+    }
+
+    @Test
+    public void assertSelectStatement() throws SQLException {
+        new SQLParsingEngine(DatabaseType.MySQL, "SELECT t.a, b, 'hello' FROM atable t WHERE t.a=10;", null).parse();
     }
 }
