@@ -13,6 +13,6 @@ import java.util.List;
 @Getter
 public class ConditionGroup {
     private final ELogicType logicType;
-    private final List<ConditionItem> items = new LinkedList<>();
-    private ConditionGroup next;
+    private final ConditionItem left;
+    private final ConditionGroup right;
 }
