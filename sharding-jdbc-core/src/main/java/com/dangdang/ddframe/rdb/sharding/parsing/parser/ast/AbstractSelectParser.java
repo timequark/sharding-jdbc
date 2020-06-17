@@ -1,7 +1,6 @@
 package com.dangdang.ddframe.rdb.sharding.parsing.parser.ast;
 
 import com.dangdang.ddframe.rdb.sharding.constant.SQLType;
-import com.dangdang.ddframe.rdb.sharding.parsing.parser.ast.model.AstParser;
 import com.dangdang.ddframe.rdb.sharding.parsing.parser.ast.model.AstSelect;
 import lombok.AccessLevel;
 import lombok.Getter;

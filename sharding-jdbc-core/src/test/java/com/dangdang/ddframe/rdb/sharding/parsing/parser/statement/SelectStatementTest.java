@@ -17,6 +17,7 @@
 
 package com.dangdang.ddframe.rdb.sharding.parsing.parser.statement;
 
+import com.dangdang.ddframe.rdb.sharding.api.rule.ShardingRule;
 import com.dangdang.ddframe.rdb.sharding.constant.DatabaseType;
 import com.dangdang.ddframe.rdb.sharding.constant.OrderType;
 import com.dangdang.ddframe.rdb.sharding.parsing.SQLParsingEngine;
@@ -30,7 +31,7 @@ import java.sql.SQLException;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public final class SelectStatementTest {
+public final class SelectStatementTest extends AbstractStatementParserTest {
     
     @Test
     public void assertIsSameGroupByAndOrderByItemsWhenGroupByAndOrderByAllEmpty() throws SQLException {
@@ -55,6 +56,6 @@ public final class SelectStatementTest {
 
     @Test
     public void assertSelectStatement() throws SQLException {
-        new SQLParsingEngine(DatabaseType.MySQL, "SELECT t.a, b, 'hello' FROM atable t WHERE t.a=10;", null).parse();
+        new SQLParsingEngine(DatabaseType.MySQL, "SELECT t.a, t.b AS b, t.c AS c1, 'hello' FROM atable t WHERE DATE(t.b)=20190101 AND t.a=10;", createShardingRule()).parse();
     }
 }
